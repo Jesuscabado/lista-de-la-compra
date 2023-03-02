@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTA DE LA COMPRA</title>
+    <style>
+        .important {
+            background-color: aqua;
+        }
+        .fa-trash {
+            color: rgba(41, 196, 30, 0.556);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1>Lista Compra <i class="fa fa-trash"></i></h1>
+
+    <input type="text" id="input">
+    <button id="guardar">Guardar</button>
+    <ul id="lista">
+
+
+    </ul>
+    <script>
+        let boton = document.getElementById("guardar");
+        boton.addEventListener("click",guardarElemento);
+
+        function guardarElemento() {
+            let text = document.getElementById("input").value.trim();
+            let textToCheck = text.replace(/\s/g, '');
+            if(textToCheck.length < 2) {
+                return;
+            }
+            if(alreadyExists(text)) {
+                return;
+            }
+            let li = document.createElement("li");
+            let icono = document.createElement("i");
+            icono.classList.add("fa","fa-trash");
+            li.innerText = text.trim();
+            li.appendChild(icono);
+            li.addEventListener("click",clickImportant);
+
+            document.getElementById("lista").appendChild(li);
+            document.getElementById("input").value = "";
+
+        }
+
+        function clickImportant(event){
+            let element = event.target;
+            if(element.classList.contains("fa-trash")){
+                deleteParent(element);
+                return;
+            }
+            toggleimportant(event.target);
+        }
+        function toggleimportant(element) {
+            element.classList.toggle("important");
+        }
+
+        function deleteParent(element) {
+            let parent = element.parentElement;
+            let text = parent.innerText;
+            if(confirm("¿Deseas borrar este articulo? \n" + text)){
+           
+                parent.remove();
+            }
+        }
+
+        function alreadyExists(text) {
+                let lista = document.getElementById("lista");
+                let elementosLista = lista.getElementsByTagName("li");
+                for(let i = 0; i< elementosLista.length; i++) {
+                if(text === elementosLista[i].innerText) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>
