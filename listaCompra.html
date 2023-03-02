@@ -14,21 +14,49 @@
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <section id="seccion_lista">
-    <h1>Lista Compra <i class="fa fa-trash"></i></h1>
+        <h1>Lista Compra <i class="fa fa-trash"></i></h1>
 
-    <input type="text" id="input">
-    <button id="guardar">Guardar</button>
-    <ul id="lista">
+        <input type="text" id="input">
+        <button id="guardar">Guardar</button>
+        <ul id="lista">
 
 
-    </ul>
-    <script src = "listaCompra.js"></script>
+        </ul>
+        <script src = "listaCompra.js"></script>
     </section>
-    <section id = "seccion_blog">
+    <br>
+    <br>
+    <section id = "seccionBlog">
         <h1>Blog<i class="fa fa-adress-card-o"></i></h1>
+        <section id="seccionBlogForm">
+            <form action="" id="blogForm">
+                <fieldset>
+                    <legend>Crear un nuevo post</legend>
+                    <label for="titulo">Titulo</label>
+                    <input type="text" id="titulo" name="titulo">
+                        <br>
+                    <label for="contenido">Contenido</label>
+                    <textarea name="contenido" cols="30" rows="10" id="contenido" placeholder="escribe algo...."></textarea>
+                    <br>
+                    <input type="submit" value="Crear" id="crear"/>
+                </fieldset>
+            </form>
+        </section>
+        <section id= "nuevosBlog">
+            <h2 id="tituloDeBlog">TITULO</h2>
+            <article>
+                <h3>titulo del post</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, maxime!
+                </p>
+            </article>
+            <script src="blog.js"></script>
+        </section>
     </section>
+    
 </body>
 </html>
