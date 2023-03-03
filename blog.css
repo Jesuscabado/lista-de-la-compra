@@ -1,0 +1,44 @@
+
+.important {
+    background-color: rgb(194, 232, 232);
+}
+
+.fa-trash {
+    color: rgb(249, 0, 0);
+}
+
+.fa-pencil {
+    color: rgba(246, 178, 7, 0.982);
+    font-size: x-large;
+}
+
+h1, #seccion_lista {
+    text-align: center;
+}
+
+#seccionBlog {
+    background-color: rgb(239, 242, 246);
+    display: top left;
+    width:auto;
+    border: 15px solid rgb(15, 25, 222);
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    float: left;
+}
+
+#seccion_lista {
+    background-color: rgb(254, 254, 254);
+    width: 300px;
+    border: 15px solid rgb(15, 25, 222);
+    padding: 50px;
+    margin: 0px;
+    float: right;
+    box-shadow: 0 4px 8px 0 rgba(213, 8, 8, 0.2), 0 6px 20px 0 rgba(11, 66, 175, 0.19);
+}
+
+
+body{
+    margin:auto;
+}
