@@ -37,18 +37,3 @@ h1, #seccion_lista {
     float: right;
     box-shadow: 0 4px 8px 0 rgba(213, 8, 8, 0.2), 0 6px 20px 0 rgba(11, 66, 175, 0.19);
 }
-
-
-body{
-    margin:auto;
-}
-<<<<<<< Updated upstream
-=======
-
-.important {
-    background-color: aqua;
-}
-.fa-trash {
-    color: rgba(41, 196, 30, 0.556);
-}
->>>>>>> Stashed changes
